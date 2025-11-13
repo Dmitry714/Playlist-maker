@@ -6,4 +6,17 @@
     </style>
 
     <style name="Theme.PlaylistMaker" parent="Base.Theme.PlaylistMaker" />
+
+    <style name="Button.MainActivity" parent="Widget.Material3.Button">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:fontFamily">@font/yst_medium</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">22sp</item>
+        <item name="cornerRadius">16dp</item>
+        <item name="backgroundTint">@color/white</item>
+        <item name="iconTint">@color/black</item>
+        <item name="iconGravity">textStart</item>
+    </style>
+
 </resources>
