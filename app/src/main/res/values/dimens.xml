@@ -1,4 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="Something">12sp</dimen>
+    <dimen name="large_text_size">22sp</dimen>
+    <dimen name="medium_text_size">16sp</dimen>
+
+    <dimen name="base_radius">16dp</dimen>
+    <dimen name="base_inset">0dp</dimen>
+    <dimen name="base_padding">16dp</dimen>
+    <dimen name="main_button_margin">16dp</dimen>
+
+    <dimen name="settings_row_height">61dp</dimen>
+
 </resources>

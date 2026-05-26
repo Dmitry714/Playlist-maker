@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
@@ -7,58 +7,55 @@
     android:layout_height="match_parent"
     android:background="@color/yp_blue"
     android:fitsSystemWindows="true"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/materialToolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_height="wrap_content">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/yst_medium"
             android:text="@string/toolbar_app_name"
             android:textColor="@color/white"
-            android:textSize="22sp" />
+            android:textSize="@dimen/large_text_size" />
 
     </com.google.android.material.appbar.MaterialToolbar>
 
     <LinearLayout
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:orientation="vertical"
-        android:paddingStart="16dp"
+        android:paddingStart="@dimen/base_padding"
+        android:paddingEnd="@dimen/base_padding"
         android:paddingTop="24dp"
-        android:paddingEnd="16dp"
-        android:paddingBottom="28dp"
-
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/materialToolbar">
+        android:paddingBottom="28dp">
 
         <com.google.android.material.button.MaterialButton
+            android:id="@+id/searchButton"
             style="@style/Button.MainActivity"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_marginBottom="16dp"
+            android:layout_marginBottom="@dimen/main_button_margin"
             android:layout_weight="1"
             android:text="@string/search_button"
             app:icon="@drawable/ic_search" />
 
         <com.google.android.material.button.MaterialButton
+            android:id="@+id/libraryButton"
             style="@style/Button.MainActivity"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_marginBottom="16dp"
+            android:layout_marginBottom="@dimen/main_button_margin"
             android:layout_weight="1"
             android:text="@string/media_library_button"
             app:icon="@drawable/ic_media_library" />
 
         <com.google.android.material.button.MaterialButton
+            android:id="@+id/settingsButton"
             style="@style/Button.MainActivity"
             android:layout_width="match_parent"
             android:layout_height="0dp"
@@ -68,4 +65,4 @@
 
     </LinearLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

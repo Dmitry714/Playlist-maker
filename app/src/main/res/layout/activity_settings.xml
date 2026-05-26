@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    android:id="@+id/settingsActivity"
+    tools:context=".SettingsActivity">
 
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/materialToolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
         app:navigationIcon="@drawable/ic_back_button">
 
         <TextView
@@ -19,70 +20,59 @@
             android:layout_height="wrap_content"
             android:text="@string/settings"
             android:textColor="@color/black"
-            android:textSize="22sp" />
+            android:textSize="@dimen/large_text_size" />
     </com.google.android.material.appbar.MaterialToolbar>
 
-
     <LinearLayout
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:orientation="vertical"
         android:paddingTop="24dp"
-        android:paddingBottom="28dp"
+        android:paddingBottom="28dp">
 
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/materialToolbar">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="61dp"
-            android:paddingStart="16dp"
-            android:paddingEnd="16dp">
+            android:layout_height="@dimen/settings_row_height"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="@dimen/base_padding"
+            android:paddingEnd="@dimen/base_padding">
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:fontFamily="@font/yst_regular"
                 android:text="@string/dark_theme_button"
                 android:textColor="@color/black"
-                android:textSize="16sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                android:textSize="@dimen/medium_text_size" />
 
             <com.google.android.material.switchmaterial.SwitchMaterial
-                android:id="@+id/theme_switcher"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                android:layout_height="wrap_content" />
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
 
         <com.google.android.material.button.MaterialButton
             style="@style/Button.SettingsActivity"
             android:layout_width="match_parent"
-            android:layout_height="61dp"
+            android:layout_height="@dimen/settings_row_height"
             android:text="@string/share_button"
             app:icon="@drawable/ic_share" />
 
         <com.google.android.material.button.MaterialButton
             style="@style/Button.SettingsActivity"
             android:layout_width="match_parent"
-            android:layout_height="61dp"
+            android:layout_height="@dimen/settings_row_height"
             android:text="@string/support_button"
             app:icon="@drawable/ic_support" />
 
         <com.google.android.material.button.MaterialButton
             style="@style/Button.SettingsActivity"
             android:layout_width="match_parent"
-            android:layout_height="61dp"
+            android:layout_height="@dimen/settings_row_height"
             android:text="@string/user_agreement"
             app:icon="@drawable/ic_arrow" />
-
     </LinearLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
