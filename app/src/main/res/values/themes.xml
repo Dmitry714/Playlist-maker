@@ -6,4 +6,38 @@
     </style>
 
     <style name="Theme.PlaylistMaker" parent="Base.Theme.PlaylistMaker" />
+
+    <style name="Button.MainActivity" parent="Widget.MaterialComponents.Button">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:fontFamily">@font/yst_medium</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/large_text_size</item>
+        <item name="cornerRadius">@dimen/base_radius</item>
+        <item name="backgroundTint">@color/white</item>
+        <item name="iconTint">@color/black</item>
+        <item name="iconGravity">textStart</item>
+    </style>
+
+    <style name="Button.SettingsActivity" parent="Widget.MaterialComponents.Button">
+        <item name="android:insetTop">@dimen/base_inset</item>
+        <item name="android:insetBottom">@dimen/base_inset</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:textAlignment">viewStart</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/medium_text_size</item>
+        <item name="backgroundTint">@color/white</item>
+        <item name="cornerRadius">0dp</item>
+        <item name="iconGravity">end</item>
+        <item name="iconTint">@color/yp_gray</item>
+        <item name="android:fontFamily">@font/yst_regular</item>
+    </style>
+
+    <style name="Switch.SettingsActivity" parent="Widget.Material3.CompoundButton.MaterialSwitch">
+        <item name="fontFamily">@font/yst_regular</item>
+        <item name="paddingStart">@dimen/base_padding</item>
+        <item name="paddingEnd">@dimen/base_padding</item>
+    </style>
+
 </resources>
